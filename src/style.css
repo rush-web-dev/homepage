@@ -68,3 +68,12 @@ h6 {
 }
 
 /*------------ start of styles ------------*/
+svg {
+  height: 2rem;
+  width: auto;
+}
+
+img {
+  height: 10rem;
+  width: auto;
+}
