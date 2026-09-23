@@ -69,12 +69,7 @@ h6 {
 
 /*------------ start of styles ------------*/
 svg {
-  height: 2rem;
-  width: auto;
-}
-
-img {
-  height: 10rem;
+  height: 1.325rem;
   width: auto;
 }
 
@@ -83,16 +78,70 @@ img {
   --clr-primary: #0891b2;
   --clr-light-100: #ffffff;
   --clr-light-200: #c2c2c3;
-  --clr-dark-700: #575655;
+  --clr-dark-700: #57565543;
   --clr-dark-800: #181b14;
   --clr-dark-900: #060b04;
 
-  --fw-neutral: 500;
-  --fw-bold: 800;
+  --fw-neutral: 100;
+  --fw-bold: 600;
 
   --fs-300: 1rem;
   --fs-400: 1.125rem;
   --fs-500: 1.25rem;
-  --fs-700: 1.875rem;
-  --fs-800: 2.5rem;
+  --fs-700: 1.5rem;
+  --fs-800: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  font-weight: var(--fw-neutral);
+  margin: 1.5rem 2.5rem;
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  align-items: center;
+}
+
+.profile-picture-container {
+  position: relative;
+}
+
+.profile-name {
+  color: var(--clr-light-100);
+  font-size: var(--fs-800);
+  text-wrap: nowrap;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-me-section {
+  height: 85%;
+  padding: 1rem 0.5rem;
+  display: grid;
+  align-items: center;
+  box-shadow: 1px 2px 5px var(--clr-dark-700);
+}
+
+.about-title {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-700);
+  color: var(--clr-dark-900);
+}
+
+.about-text {
+  font-weight: var(--fw-neutral);
+  font-size: var(--fs-300);
+  line-height: 1.2rem;
+}
+
+.social-links {
+  justify-self: end;
 }
