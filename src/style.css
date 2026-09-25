@@ -181,3 +181,41 @@ ul {
   display: flex;
   gap: 1rem;
 }
+
+.contact-footer {
+  padding: 1.5rem 2.5rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-light-100);
+  font-weight: var(--fw-neutral);
+  font-size: var(--fs-400);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2fr 3fr;
+}
+
+.contact-title {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-700);
+}
+
+.contact-text,
+.location-town,
+.mail-container {
+  margin-block-end: 1rem;
+}
+
+.mail-container,
+.phone-number-container {
+  display: flex;
+  gap: 0.25rem;
+
+  > svg {
+    stroke: var(--clr-light-100);
+    fill: var(--clr-light-100);
+  }
+}
+
+.footer-social-links svg {
+  height: 1.5rem;
+  width: auto;
+}
