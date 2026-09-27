@@ -223,7 +223,7 @@ ul {
 }
 
 .contact-footer {
-  padding: 1.5rem 2.5rem;
+  padding: 5rem 7rem 5rem 7rem;
   background-color: var(--clr-primary);
   color: var(--clr-light-100);
   font-weight: var(--fw-neutral);
@@ -236,12 +236,13 @@ ul {
 .contact-title {
   font-weight: var(--fw-bold);
   font-size: var(--fs-700);
+  margin-block-end: 1rem;
 }
 
 .contact-text,
 .location-town,
 .mail-container {
-  margin-block-end: 1rem;
+  margin-block-end: 3rem;
 }
 
 .mail-container,
@@ -250,12 +251,30 @@ ul {
   gap: 0.25rem;
 
   > svg {
+    margin-inline-end: 2rem;
+    height: 3rem;
+    width: auto;
     stroke: var(--clr-light-100);
     fill: var(--clr-light-100);
   }
 }
 
+.phone-number-container {
+  margin-block-end: 1.5rem;
+}
+
+.footer-social-links ul {
+  width: max-content;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .footer-social-links svg {
-  height: 1.5rem;
+  height: 5rem;
   width: auto;
+}
+
+.contact-footer img {
+  width: 100%;
 }
