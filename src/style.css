@@ -91,6 +91,9 @@ svg {
   --fs-500: 2.5rem; /* project name */
   --fs-700: 4.5rem; /* titles */
   --fs-800: 6rem; /* name in picture */
+
+  --content-max-width: 1792px;
+  --page-padding: 2rem;
 }
 
 ul {
@@ -115,7 +118,7 @@ ul {
   position: relative;
   isolation: isolate;
   font-weight: var(--fw-neutral);
-  max-width: 1792px;
+  width: min(calc(100% - 2 * var(--page-padding)), var(--content-max-width));
   margin: 3rem auto;
   display: grid;
   grid-template-columns: 700px 1fr;
@@ -173,7 +176,7 @@ ul {
 }
 
 .main {
-  max-width: 1792px;
+  width: min(calc(100% - 2 * var(--page-padding)), var(--content-max-width));
   margin: 10rem auto 3rem;
 }
 
