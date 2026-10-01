@@ -225,17 +225,6 @@ ul {
   width: auto;
 }
 
-.contact-footer {
-  padding: 5rem 7rem 5rem 7rem;
-  background-color: var(--clr-primary);
-  color: var(--clr-light-100);
-  font-weight: var(--fw-neutral);
-  font-size: var(--fs-400);
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 2fr 3fr;
-}
-
 .contact-title {
   font-weight: var(--fw-bold);
   font-size: var(--fs-700);
@@ -278,6 +267,34 @@ ul {
   width: auto;
 }
 
-.contact-footer img {
+.contact-footer {
   width: 100%;
+  padding: 5rem 0;
+
+  background-color: var(--clr-primary);
+  color: var(--clr-light-100);
+  font-weight: var(--fw-neutral);
+  font-size: var(--fs-400);
+}
+
+.footer-wrapper {
+  width: min(calc(100% - 2 * var(--page-padding)), var(--content-max-width));
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 4rem;
+
+  align-items: center;
+}
+
+.footer-wrapper picture {
+  display: block;
+  min-width: 0;
+}
+
+.contact-footer img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
