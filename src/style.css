@@ -22,6 +22,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img,
@@ -106,10 +107,10 @@ ul {
   top: 0;
   left: 50%;
   width: 200vw;
-  height: 150%;
+  height: 200%;
   content: '';
   background-color: var(--clr-primary);
-  transform: translateX(-50%) translateY(-50%) rotate(-12deg);
+  transform: translateX(-50%) translateY(-70%) rotate(-12deg);
   z-index: -1;
   box-shadow: 2px 4px 5px var(--clr-shadow);
 }
