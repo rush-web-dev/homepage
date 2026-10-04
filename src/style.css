@@ -70,7 +70,7 @@ h6 {
 
 /*------------ start of styles ------------*/
 svg {
-  height: 4rem;
+  height: 3rem;
   width: auto;
 }
 
@@ -87,11 +87,12 @@ svg {
   --fw-neutral: 100;
   --fw-bold: 500;
 
-  --fs-300: 1.5rem; /* project text */
-  --fs-400: 2rem; /* contact text, about text */
-  --fs-500: 2.5rem; /* project name */
-  --fs-700: 4.5rem; /* titles */
-  --fs-800: 6rem; /* name in picture */
+  --fs-300: 1rem; /* project text */
+  --fs-350: 1.4rem;
+  --fs-400: 1.625rem; /* about text */
+  --fs-500: 1.625rem; /* project name */
+  --fs-700: 3.5rem; /* titles */
+  --fs-800: 4.5rem; /* name in picture */
 
   --content-max-width: 1792px;
   --page-padding: 2rem;
@@ -100,6 +101,19 @@ svg {
 ul {
   list-style-type: none;
   padding: 0;
+}
+
+.header::before {
+  content: '';
+  background-color: var(--clr-primary);
+  width: 200vw;
+  height: 40rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: bottom center;
+  transform: translateX(-20%) translateY(-20rem) rotate(-30deg);
+  z-index: -1;
 }
 
 .header {
@@ -115,10 +129,13 @@ ul {
   height: auto;
 }
 
+.profile-picture-container {
+  position: relative;
+}
+
 .profile-name {
   color: var(--clr-light-100);
-  font-size: clamp(3rem, 10vw, var(--fs-800));
-  text-wrap: nowrap;
+  font-size: var(--fs-800);
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -126,12 +143,16 @@ ul {
 }
 
 .about-me-section {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+
   background-color: var(--clr-light-100);
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  box-shadow: 2px 4px 5px var(--clr-shadow);
+  align-items: center;
 }
 
 .about-title {
@@ -148,7 +169,8 @@ ul {
 }
 
 .social-links {
-  width: 100%;
+  margin-top: 1rem;
+  width: 13rem;
 }
 
 .social-links ul {
@@ -157,6 +179,9 @@ ul {
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: min(calc(100% - 2 * var(--page-padding)), var(--content-max-width));
   margin: 5rem auto 3rem;
 }
@@ -165,12 +190,12 @@ ul {
   font-weight: var(--fw-bold);
   font-size: var(--fs-700);
   color: var(--clr-dark-900);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .project-grid-container {
   display: grid;
-  gap: 3rem;
+  gap: 4rem;
   grid-template-columns: 1fr;
   margin-bottom: 6rem;
 }
@@ -204,11 +229,12 @@ ul {
 }
 
 .links svg {
-  height: 2.75rem;
+  height: 1.5rem;
   width: auto;
 }
 
 .contact-title {
+  align-self: center;
   font-weight: var(--fw-bold);
   font-size: var(--fs-700);
   margin-block-end: 1rem;
@@ -217,56 +243,58 @@ ul {
 .contact-text,
 .location-town,
 .mail-container {
-  margin-block-end: 2rem;
-}
-
-.mail-container,
-.phone-number-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-
-  > svg {
-    margin-inline-end: 1rem;
-    height: 3rem;
-    width: auto;
-    stroke: var(--clr-light-100);
-    fill: var(--clr-light-100);
-  }
-}
-
-.phone-number-container {
   margin-block-end: 1.5rem;
 }
 
+.mail-container svg,
+.phone-number-container svg {
+  display: none;
+}
+
+.footer-social-links {
+  margin-inline: auto;
+}
+
 .footer-social-links ul {
-  width: 100%;
+  width: max-content;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
 .footer-social-links svg {
-  height: 4rem;
+  height: 3.5rem;
   width: auto;
+}
+
+.contact-text {
+  letter-spacing: normal;
+  font-size: var(--fs-350);
 }
 
 .contact-footer {
   width: 100%;
-  padding: 4rem 0;
+  padding: 4rem 0 0;
   background-color: var(--clr-primary);
   color: var(--clr-light-100);
   font-weight: var(--fw-neutral);
-  font-size: var(--fs-400);
+  font-size: var(--fs-300);
+  letter-spacing: 1px;
 }
 
 .footer-wrapper {
-  width: min(calc(100% - 2 * var(--page-padding)), var(--content-max-width));
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+.footer-text {
+  margin-inline: 1rem;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .footer-wrapper picture {
@@ -281,6 +309,34 @@ ul {
 }
 
 @media (min-width: 900px) {
+  svg {
+    height: 4rem;
+    width: auto;
+  }
+
+  :root {
+    /* Learned this from kevin powell */
+    --clr-primary: #0891b2;
+    --clr-light-100: #ffffff;
+    --clr-light-200: #c2c2c3;
+    --clr-dark-700: #575655;
+    --clr-dark-800: #181b14;
+    --clr-dark-900: #060b04;
+    --clr-shadow: #58575591;
+
+    --fw-neutral: 100;
+    --fw-bold: 500;
+
+    --fs-300: 1.5rem; /* project text */
+    --fs-400: 2rem; /* contact text, about text */
+    --fs-500: 2.5rem; /* project name */
+    --fs-700: 4.5rem; /* titles */
+    --fs-800: 6rem; /* name in picture */
+
+    --content-max-width: 1792px;
+    --page-padding: 2rem;
+  }
+
   .header::before {
     position: absolute;
     top: 0;
@@ -382,5 +438,24 @@ ul {
     grid-template-columns: 2fr 3fr;
     gap: 4rem;
     align-items: center;
+  }
+
+  .mail-container,
+  .phone-number-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+
+    > svg {
+      margin-inline-end: 1rem;
+      height: 3rem;
+      width: auto;
+      stroke: var(--clr-light-100);
+      fill: var(--clr-light-100);
+    }
+  }
+
+  .phone-number-container {
+    margin-block-end: 1.5rem;
   }
 }
