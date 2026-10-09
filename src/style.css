@@ -315,26 +315,11 @@ ul {
   }
 
   :root {
-    /* Learned this from kevin powell */
-    --clr-primary: #0891b2;
-    --clr-light-100: #ffffff;
-    --clr-light-200: #c2c2c3;
-    --clr-dark-700: #575655;
-    --clr-dark-800: #181b14;
-    --clr-dark-900: #060b04;
-    --clr-shadow: #58575591;
-
-    --fw-neutral: 100;
-    --fw-bold: 500;
-
-    --fs-300: 1.5rem; /* project text */
-    --fs-400: 2rem; /* contact text, about text */
-    --fs-500: 2.5rem; /* project name */
-    --fs-700: 4.5rem; /* titles */
-    --fs-800: 6rem; /* name in picture */
-
-    --content-max-width: 1792px;
-    --page-padding: 2rem;
+    --fs-300: 1.5rem;
+    --fs-400: 2rem;
+    --fs-500: 2.5rem;
+    --fs-700: 4.5rem;
+    --fs-800: 6rem;
   }
 
   .header::before {
@@ -362,8 +347,15 @@ ul {
     width: 700px;
   }
 
+  .profile-name {
+    text-wrap: nowrap;
+  }
+
   .about-me-section {
+    width: 100%;
     height: 85%;
+    left: 0;
+    transform: none;
     padding: 2rem 1.5rem;
     display: grid;
     grid-template-rows: 8rem auto auto;
@@ -375,6 +367,7 @@ ul {
   }
 
   .social-links {
+    margin-top: 0;
     width: 250px;
     justify-self: end;
   }
@@ -407,37 +400,22 @@ ul {
     padding: 0.25rem 2rem;
   }
 
+  .links svg {
+    height: 2.75rem;
+  }
+
+  .contact-title {
+    align-self: start;
+  }
+
   .contact-text,
   .location-town,
   .mail-container {
     margin-block-end: 3rem;
   }
 
-  .mail-container,
-  .phone-number-container {
-    > svg {
-      margin-inline-end: 2rem;
-    }
-  }
-
-  .footer-social-links ul {
-    width: max-content;
-    justify-content: space-between;
-  }
-
-  .footer-social-links svg {
-    height: 5rem;
-  }
-
-  .contact-footer {
-    padding: 5rem 0;
-  }
-
-  .footer-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 4rem;
-    align-items: center;
+  .contact-text {
+    letter-spacing: normal;
   }
 
   .mail-container,
@@ -447,7 +425,8 @@ ul {
     gap: 0.25rem;
 
     > svg {
-      margin-inline-end: 1rem;
+      display: block;
+      margin-inline-end: 2rem;
       height: 3rem;
       width: auto;
       stroke: var(--clr-light-100);
@@ -457,5 +436,37 @@ ul {
 
   .phone-number-container {
     margin-block-end: 1.5rem;
+  }
+
+  .footer-social-links {
+    margin-inline: 0;
+  }
+
+  .footer-social-links ul {
+    width: max-content;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .footer-social-links svg {
+    height: 5rem;
+  }
+
+  .contact-footer {
+    padding: 5rem 0;
+    font-size: var(--fs-400);
+  }
+
+  .footer-wrapper {
+    width: min(calc(100% - 2 * var(--page-padding)), var(--content-max-width));
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .footer-text {
+    margin-inline: 0;
   }
 }
