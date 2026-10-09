@@ -121,7 +121,7 @@ ul {
   isolation: isolate;
   font-weight: var(--fw-neutral);
   width: min(calc(100% - 2 * var(--page-padding)), var(--content-max-width));
-  margin: 3rem auto;
+  margin: 1rem auto 3rem;
 }
 
 .profile-picture-container img {
@@ -148,7 +148,7 @@ ul {
   left: 50%;
   transform: translateX(-50%);
 
-  background-color: var(--clr-light-100);
+  background-color: transparent;
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -157,6 +157,8 @@ ul {
 
 .about-content {
   width: 100%;
+  background-color: var(--clr-light-100); /* added */
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
