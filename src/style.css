@@ -352,12 +352,14 @@ ul {
   }
 
   .profile-name {
-    top: -145px;
+    position: absolute;
+    top: 12px;
     bottom: auto;
-    left: 40%;
-    transform: none;
+    left: 80%;
+    transform: translateX(0%) translateY(-10%);
     white-space: nowrap;
-    font-size: clamp(2rem, 4vw, 4rem);
+    font-size: var(--fs-700);
+    z-index: 3;
   }
 
   .about-me-section {
