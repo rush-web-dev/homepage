@@ -319,11 +319,10 @@ ul {
   }
 
   .header::before {
-    top: -180px;
     left: 50%;
     width: 150vw;
     height: 600px;
-    transform: translateX(-50%) rotate(-8deg);
+    transform: translateX(-50%) translateY(-50%) rotate(-8deg);
   }
 
   .about-card {
