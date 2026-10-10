@@ -402,6 +402,83 @@ ul {
   .project-grid-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  .contact-title {
+    align-self: start;
+  }
+
+  .contact-text,
+  .location-town,
+  .mail-container {
+    margin-block-end: 3rem;
+  }
+
+  .contact-text {
+    letter-spacing: normal;
+  }
+
+  .mail-container,
+  .phone-number-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+
+    > svg {
+      display: block;
+      margin-inline-end: 2rem;
+      height: 3rem;
+      width: auto;
+      stroke: var(--clr-light-100);
+      fill: var(--clr-light-100);
+    }
+  }
+
+  .phone-number-container {
+    margin-block-end: 1.5rem;
+  }
+
+  .footer-social-links {
+    margin-inline: 0;
+  }
+
+  .footer-social-links ul {
+    width: max-content;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .footer-social-links svg {
+    height: 5rem;
+  }
+
+  .contact-footer {
+    padding: 5rem 0;
+    font-size: var(--fs-400);
+  }
+
+  .footer-wrapper {
+    width: min(calc(100% - 2 * var(--page-padding)), var(--content-max-width));
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .footer-text {
+    margin-inline: 0;
+  }
+
+  .footer-social-links {
+    margin: 0;
+    padding: 0;
+    justify-content: start;
+    width: 250px;
+  }
+
+  .footer-social-links svg {
+    height: 3rem;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -572,4 +649,21 @@ ul {
   .footer-text {
     margin-inline: 0;
   }
+}
+
+.mail-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 1rem; /* Adds space between the icon and email */
+}
+
+.mail-container > svg {
+  flex: 0 0 3rem;
+  margin-inline-end: 0;
+}
+
+.mail-container .mail {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
