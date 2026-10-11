@@ -6,3 +6,5 @@ a webpack template to use for starting new projects, following the odin project.
 # Jest
 - jest is not installed, if you need it, run: npm install jest
 - the sum.js and sum.test.js are just to test jest, you can delete them after testing or if you don't need jest
+
+note: I've grabbed the image randomly from google, shouldn't have done that, I'll remove it if needed but I've learned enough already.
